@@ -1,0 +1,56 @@
+{
+    "name": "RPI_Printer_Kiosk",
+    "homepage": "https://3clypse.github.io/",
+    "version": "0.1.0",
+    "author": "David",
+    "description": "RPI Printer Launcher",
+    "keywords": [ "Raspberry PI", "Kiosk", "Printer" ],
+    "maintainers":[{
+        "name": "David",
+        "email": "3clypse@users.noreply.github.com",
+        "web": "https://3clypse.github.io/"
+    }],
+    "repository": [{
+        "type": "git",
+        "url": "git://github.com/3clypse/RPI_Printer_Kiosk.git"
+    }],
+    "bugs": "https://github.com/3clypse/RPI_Printer_Kiosk/issues",
+    "license": "MIT",
+    "main": "index.htm",
+    "window": {
+        "title": "RPI Printer Kiosk",
+        "icon": "_img/icon32.png",
+        "toolbar": false,
+        "resizable": true,
+        "visible": true,
+        "transparent": false,
+        "width": 400,
+        "height": 400,
+        "min_width": 400,
+        "min_height": 200,
+        "max_width": 8000,
+        "max_height": 8000,
+        "position": "center",
+        "always-on-top": false,
+        "show_in_taskbar": false,
+        "fullscreen": false,
+        "frame": true,
+        "as_desktop": false
+    },
+    "nodejs": true,
+    "single-instance": true,
+    "node-main": "_scripts/node.js",
+    "webkit": {
+        "page-cache": false,
+        "java": false,
+        "plugin": true
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "nw": "^0.12.3"
+    },
+    "scripts": {
+        "start": "nw ."
+    }
+}
