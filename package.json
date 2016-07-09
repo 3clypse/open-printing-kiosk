@@ -31,9 +31,9 @@
         "max_width": 8000,
         "max_height": 8000,
         "position": "center",
-        "always-on-top": false,
+        "always-on-top": true,
         "show_in_taskbar": false,
-        "fullscreen": false,
+        "fullscreen": true,
         "frame": true,
         "as_desktop": false
     },
