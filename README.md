@@ -1,12 +1,20 @@
 # Raspberry Pi Printer Kiosk 
 
-Kiosk APP Launcher based on [UGUI](http://ugui.io/).
+**APP Launcher Kiosk with printing support, based on [UGUI](http://ugui.io/).**
 
-## Installation
-TODO: Describe the installation process
+Thinked to be a self-service printer kiosk.
 
-## Usage
-TODO: Write usage instructions
+## Installation & Usage
+
+If you have Node.JS installed:
+
+	1. [Download latest release](https://github.com/3clypse/RPI_Printer_Kiosk/releases)
+	2. Extract it
+	3. `npm install`
+	4. `npm start`
+
+If you don't have Node.JS installed:
+
 
 ## Contributing
 1. Fork it!
@@ -16,7 +24,8 @@ TODO: Write usage instructions
 5. Submit a pull request :D
 
 ## Credits
-TODO: Write credits
 
-## License
-TODO: Write license
+**Technology**
+
+* [UGUI Team](https://github.com/UniversalGUI/UGUI)
+* ...
