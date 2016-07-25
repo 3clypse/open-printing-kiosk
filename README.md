@@ -6,15 +6,20 @@ Thinked to be a self-service printer kiosk.
 
 ## Installation & Usage
 
-If you have Node.JS installed:
+**If you have Node.JS installed:**
 
-	1. [Download latest release](https://github.com/3clypse/RPI_Printer_Kiosk/releases)
-	2. Extract it
-	3. `npm install`
-	4. `npm start`
+1. Download latest [release](https://github.com/3clypse/RPI_Printer_Kiosk/releases)
+2. Extract it
+3. `npm install`
+4. `npm start`
 
-If you don't have Node.JS installed:
+**If you don't have Node.JS installed:**
 
+1. Download [NW.js](http://nwjs.io/)
+2. Download latest [release](https://github.com/3clypse/RPI_Printer_Kiosk/releases)
+3. Extract it
+5. `npm install`
+6. `npm start`
 
 ## Contributing
 1. Fork it!
