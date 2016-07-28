@@ -5,11 +5,8 @@ $(document).ready( runApp );
 //Container for your app's custom JS
 function runApp() {
 
-
-
-	$('#test').click( function() {
-	    console.log('BIEEEEN');
-	    ugui.helpers.runcmd('chromium');
+	$('#chromium').click( function() {
+	    ugui.helpers.runcmd('chromium --incognito --start-maximized https://google.com');
 	});
 
     //CUSTOM JS FOR YOUR APP GOES HERE
