@@ -1,8 +1,10 @@
 # Raspberry Pi Printer Kiosk 
 
-**APP Launcher Kiosk with printing support, using [UGUI](http://ugui.io/) framework.**
+**APP Launcher Kiosk with printing support.**
 
 Thinked to be a self-service printer kiosk.
+
+Was made using the [UGUI](http://ugui.io/) framework.
 
 ## Installation & Usage
 
