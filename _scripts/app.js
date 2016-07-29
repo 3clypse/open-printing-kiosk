@@ -9,7 +9,9 @@ function runApp() {
 	    ugui.helpers.runcmd('chromium --incognito --start-maximized https://google.com');
 	});
 
-    //CUSTOM JS FOR YOUR APP GOES HERE
+	$('#file').click( function() {
+	    ugui.helpers.runcmd('nemo --no-desktop');
+	});
 
 
 

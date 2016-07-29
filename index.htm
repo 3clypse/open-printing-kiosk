@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="_style/ugui-devtools.css">
     <link rel="stylesheet" href="_style/style.css">
 
-    <style type="text/css">.thumbnail {border:none ; !important} </style>
+    <!-- <style type="text/css">.thumbnail {border:none ; !important} </style> -->
 
     <!-- UGUI requires jQuery 1.9.1 or above. -->
     <script type="text/javascript" src="_scripts/ven.jquery-2.1.1.min.js"></script>
@@ -58,7 +58,7 @@
   </head>
 
   <!-- Change the class form dev to prod when you're ready to distribute your application. -->
-  <body role="document" class="dev">
+  <body role="document" class="prod">
 
       <!--
         /////////////////////////////////////////////////////////////////
@@ -118,26 +118,34 @@
       </header>
 
       <div class="row" style="text-align: center">
+
         <div id="chromium" class="col-xs-6 col-md-3" style='margin-bottom: 4%'>
-          <a class="thumbnail" href="" ><img src='_img/chromium.svg' /></a>
-          <a type='button' class='btn btn-default btn-xs' >INTERNET</a>
+          <a class="thumbnail" href='' ><img src='_img/chromium.svg' /></a>
+          <a type='button' class='btn btn-default btn-xs'><h5><strong>INTERNET</strong></h5></a>
         </div>
 
-        <div class="col-xs-6 col-md-3" style='margin-bottom: 4%'>
-          <a class="thumbnail" href='google.com'><img src='_img/logo.png' /></a>
-          <a type='button' class='btn btn-default btn-xs' href='test.com'><span class='glyphicon glyphicon-edit'></span>TITULO</a>
+        <div id="file" class="col-xs-6 col-md-3" style='margin-bottom: 4%'>
+          <a class="thumbnail" href=''><img src='_img/chromium.svg' /></a>
+          <a type='button' class='btn btn-default btn-xs' ><h5><strong>ABRIR FICHEROS</strong></h5></a>
         </div>
 
-        <div class="col-xs-6 col-md-3" style='margin-bottom: 4%'>
-          <a class="thumbnail" href='google.com'><img src='_img/logo.png' /></a>
-          <a type='button' class='btn btn-default btn-xs' href='test.com'><span class='glyphicon glyphicon-edit'></span>TITULO</a>
+        <div id="file" class="col-xs-6 col-md-3" style='margin-bottom: 4%'>
+          <a class="thumbnail" href=''><img src='_img/chromium.svg' /></a>
+          <a type='button' class='btn btn-default btn-xs' ><h5><strong>ABRIR FICHEROS</strong></h5></a>
         </div>
 
-        <div class="col-xs-6 col-md-3" style='margin-bottom: 4%'>
-          <a class="thumbnail" href='google.com'><img src='_img/logo.png' /></a>
-          <a type='button' class='btn btn-default btn-xs' href='test.com'><span class='glyphicon glyphicon-edit'></span>TITULO</a>
+        <div id="file" class="col-xs-6 col-md-3" style='margin-bottom: 4%'>
+          <a class="thumbnail" href=''><img src='_img/chromium.svg' /></a>
+          <a type='button' class='btn btn-default btn-xs' ><h5><strong>ABRIR FICHEROS</strong></h5></a>
         </div>
+
       </div>
+
+        <div class="ezdz form-group jumbotron text-center well h3" title="Haz click para abrir.">
+          <span class="imageContainer"></span>
+          <label class="text-info h3 truncate" data-content="Dropped">ABRIR FICHEROS</label>
+          <input data-argName="fileToProcess" required="required" type="file" />
+        </div>
 
 
       <!--
