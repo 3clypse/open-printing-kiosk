@@ -1,4 +1,4 @@
-# Raspberry Pi Printer Kiosk 
+# Raspberry Pi Printer Kiosk (UNDER DEVELOPMENT)
 
 **APP Launcher Kiosk with printing support.**
 
