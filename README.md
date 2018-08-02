@@ -1,21 +1,19 @@
-# Raspberry Pi Printer Kiosk (UNDER DEVELOPMENT)
+# Raspberry Pi Printer Kiosk
 
-**APP Launcher Kiosk with printing support.**
+**APP Launcher Kiosk with printing support using NW.js(node-webkit).**
 
-Thinked to be a self-service printer kiosk.
-
-Was made using the [UGUI](http://ugui.io/) framework.
+Thinked to be an universal self-service printer kiosk.
 
 ## Installation & Usage
 
-**If you have Node.JS installed:**
+**If you have NW.js installed:**
 
 1. Download latest [release](https://github.com/3clypse/RPI_Printer_Kiosk/releases)
 2. Extract it
 3. `npm install`
 4. `npm start`
 
-**If you don't have Node.JS installed:**
+**If you don't have NW.js installed:**
 
 1. Download [NW.js](http://nwjs.io/)
 2. Download latest [release](https://github.com/3clypse/RPI_Printer_Kiosk/releases)
@@ -35,4 +33,5 @@ Was made using the [UGUI](http://ugui.io/) framework.
 **Technology**
 
 * [UGUI Team](https://github.com/UniversalGUI/UGUI)
+* [NW.js](http://docs.nwjs.io/)
 * ...
