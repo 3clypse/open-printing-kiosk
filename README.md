@@ -1,38 +1,27 @@
-# Raspberry Pi Printer Kiosk (UNDER DEVELOPMENT)
+# [OpenSource] Printing Kiosk.
+****
 
-**APP Launcher Kiosk with printing support.**
-
-Thinked to be a self-service printer kiosk.
-
-Was made using the [UGUI](http://ugui.io/) framework.
+Thinked to be a self-service printer kiosk using web technology.
 
 ## Installation & Usage
 
-**If you have Node.JS installed:**
-
-1. Download latest [release](https://github.com/3clypse/RPI_Printer_Kiosk/releases)
+**If you have nw.js installed:**
+1. Download latest [release](https://github.com/3clypse/open-printing-kiosk/releases)
 2. Extract it
-3. `npm install`
-4. `npm start`
+3. Run `npm install`
+4. Run `npm start`
 
-**If you don't have Node.JS installed:**
-
+**If not:**
 1. Download [NW.js](http://nwjs.io/)
-2. Download latest [release](https://github.com/3clypse/RPI_Printer_Kiosk/releases)
+2. Download latest [release](https://github.com/3clypse/open-printing-kiosk/releases)
 3. Extract it
-5. `npm install`
-6. `npm start`
+5. Run `npm install`
+6. Run `npm start`
 
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+## Docker image
+
 
 ## Credits
 
-**Technology**
-
+* [NW.js](http://nwjs.io)
 * [UGUI Team](https://github.com/UniversalGUI/UGUI)
-* ...

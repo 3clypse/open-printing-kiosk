@@ -1,56 +1,62 @@
 {
-    "name": "RPI_Printer_Kiosk",
-    "homepage": "https://3clypse.github.io/",
-    "version": "0.1.0",
-    "author": "David",
-    "description": "RPI Printer Launcher",
-    "keywords": [ "Raspberry PI", "Kiosk", "Printer" ],
-    "maintainers":[{
-        "name": "David",
-        "email": "3clypse@users.noreply.github.com",
-        "web": "https://3clypse.github.io/"
-    }],
-    "repository": [{
-        "type": "git",
-        "url": "git://github.com/3clypse/RPI_Printer_Kiosk.git"
-    }],
-    "bugs": "https://github.com/3clypse/RPI_Printer_Kiosk/issues",
-    "license": "MIT",
-    "main": "index.htm",
-    "window": {
-        "title": "RPI Printer Kiosk",
-        "icon": "_img/icon32.png",
-        "toolbar": false,
-        "resizable": true,
-        "visible": true,
-        "transparent": false,
-        "width": 400,
-        "height": 400,
-        "min_width": 400,
-        "min_height": 200,
-        "max_width": 8000,
-        "max_height": 8000,
-        "position": "center",
-        "always-on-top": true,
-        "show_in_taskbar": false,
-        "fullscreen": true,
-        "frame": true,
-        "as_desktop": false
-    },
-    "nodejs": true,
-    "single-instance": true,
-    "node-main": "_scripts/node.js",
-    "webkit": {
-        "page-cache": false,
-        "java": false,
-        "plugin": true
-    },
-    "dependencies": {
-    },
-    "devDependencies": {
-        "nw": "^0.12.3"
-    },
-    "scripts": {
-        "start": "nw ."
+  "name": "open-printing-kiosk",
+  "homepage": "https://3clypse.github.io/",
+  "version": "0.1.1",
+  "author": "David",
+  "chromium-args": "--incognito",
+  "description": "open-printing-kiosk",
+  "keywords": [
+    "opensource",
+    "printing",
+    "kiosk"
+  ],
+  "maintainers": [
+    "David <3clypse@users.noreply.github.com> (https://3clypse.github.io/)"
+  ],
+  "repository": [
+    {
+      "type": "git",
+      "url": "git://github.com/3clypse/open-printing-kiosk.git"
     }
+  ],
+  "bugs": {
+    "url": "https://github.com/3clypse/open-printing-kiosk/issues"
+  },
+  "license": "LGPL-3.0",
+  "main": "index.htm",
+  "node-remote": "",
+  "window": {
+    "title": "open-printing-kiosk",
+    "icon": "_img/icon32.png",
+    "toolbar": false,
+    "resizable": false,
+    "visible": true,
+    "transparent": false,
+    "width": 400,
+    "height": 400,
+    "min_width": 400,
+    "min_height": 200,
+    "position": "center",
+    "always-on-top": true,
+    "show_in_taskbar": false,
+    "fullscreen": false,
+    "kiosk": true,
+    "frame": true,
+    "as_desktop": false
+  },
+  "nodejs": true,
+  "single-instance": false,
+  "node-main": "_scripts/node.js",
+  "webkit": {
+    "page-cache": false,
+    "java": false,
+    "plugin": true
+  },
+  "dependencies": {
+    "hotkeys-js": "^3.3.5",
+    "nw": "^0.12.3"
+  },
+  "scripts": {
+    "start": "nw ."
+  }
 }

@@ -1,18 +1,23 @@
+// Wait for the document to load and for ugui.js to run before running your app's custom JS
+$(document).ready(runApp)
 
-//Wait for the document to load and for ugui.js to run before running your app's custom JS
-$(document).ready( runApp );
+// Container for your app's custom JS
+function runApp () {
+	var gui = require('nw.gui')
 
-//Container for your app's custom JS
-function runApp() {
+  $('a[href="#internet"]').click(function () {
+	    //console.log("ESTA FUNCIONANDO EL BOTON CON app.js");
+			var internet = gui.Window.open('https://www.google.com', {
+            frame: true,
+            focus: true,
+						toolbar: true,
+						fullscreen: true,
+            id: 'callNotification'
+      });
+			internet.on ('loaded', function(){
+				// internet.enterFullscreen();
+			});
 
-	$('#chromium').click( function() {
-	    ugui.helpers.runcmd('chromium --incognito --start-maximized https://google.com');
 	});
-
-	$('#file').click( function() {
-	    ugui.helpers.runcmd('nemo --no-desktop');
-	});
-
-
 
 }// end runApp();
