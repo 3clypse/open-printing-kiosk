@@ -21,7 +21,6 @@ Thinked to be a self-service printer kiosk using web technology.
 ## Docker image
 TO-DO
 
-
 ## Credits
 * [NW.js](http://nwjs.io)
 * [UGUI Team](https://github.com/UniversalGUI/UGUI)

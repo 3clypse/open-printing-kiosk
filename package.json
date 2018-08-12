@@ -24,28 +24,25 @@
   },
   "license": "LGPL-3.0",
   "main": "index.htm",
-  "node-remote": "",
+  "node-remote": "http://localhost",
   "window": {
     "title": "open-printing-kiosk",
     "icon": "_img/icon32.png",
-    "toolbar": false,
     "resizable": false,
     "visible": true,
     "transparent": false,
-    "width": 400,
-    "height": 400,
-    "min_width": 400,
-    "min_height": 200,
+    "width": 800,
+    "height": 600,
+    "min_width": 800,
+    "min_height": 600,
     "position": "center",
     "always-on-top": true,
     "show_in_taskbar": false,
     "fullscreen": false,
     "kiosk": true,
-    "frame": true,
-    "as_desktop": false
+    "frame": true
   },
   "nodejs": true,
-  "single-instance": false,
   "node-main": "_scripts/node.js",
   "webkit": {
     "page-cache": false,
@@ -53,8 +50,7 @@
     "plugin": true
   },
   "dependencies": {
-    "hotkeys-js": "^3.3.5",
-    "nw": "^0.12.3"
+    "nw": "^0.32"
   },
   "scripts": {
     "start": "nw ."

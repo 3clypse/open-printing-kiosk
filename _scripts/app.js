@@ -3,21 +3,18 @@ $(document).ready(runApp)
 
 // Container for your app's custom JS
 function runApp () {
-	var gui = require('nw.gui')
+  var gui = require('nw.gui')
 
   $('a[href="#internet"]').click(function () {
-	    //console.log("ESTA FUNCIONANDO EL BOTON CON app.js");
-			var internet = gui.Window.open('https://www.google.com', {
+      //console.log("ESTA FUNCIONANDO EL BOTON CON app.js");
+      var internet = gui.Window.open('https://www.viajeselcorteingles.es/documento/pdf_seguro_condicionado.pdf', {
             frame: true,
             focus: true,
-						toolbar: true,
-						fullscreen: true,
+            fullscreen: true,
             id: 'callNotification'
       });
-			internet.on ('loaded', function(){
-				// internet.enterFullscreen();
-			});
 
-	});
+  });
+
 
 }// end runApp();
