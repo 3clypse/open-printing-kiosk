@@ -1,7 +1,7 @@
 # [OpenSource] Printing Kiosk.
 ****
 
-Thinked to be a self-service printer kiosk using web technology.
+Thinked to be a self-service printer kiosk using web technology & material design.
 
 ## Installation & Usage
 
@@ -23,6 +23,7 @@ TO-DO
 
 ## Credits
 * [NW.js](http://nwjs.io)
+* [MUI](https://www.muicss.com)
 * [UGUI Team](https://github.com/UniversalGUI/UGUI)
 
 
