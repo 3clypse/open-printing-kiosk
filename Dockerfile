@@ -4,30 +4,33 @@ ENV	PKGS_TO_INSTALL \
   apt-utils \
   build-essential \
   dbus-x11 \
-  libglib2.0-0 \
-  libnss3 \
-  libgconf-2-4 \
-  libfontconfig \
-  libpangocairo-1.0-0 \
-  libxi6 \
-  libxcursor1 \
-  libxcomposite1 \
   libasound2 \
-  libxdamage1 \
-  libxtst6 \
-  libxrandr2 \
-  libgtk2.0-0 \
-  libgtk-3-0 \
-  mesa-utils \
+  libfontconfig \
+  libgconf-2-4 \
   libgl1-mesa-glx \
-  xserver-xorg-video-all \
+  libglib2.0-0 \
+  libgtk-3-0 \
+  libgtk2.0-0 \
   libnotify4 \
+  libnss3 \
+  libpangocairo-1.0-0 \
+  libxcomposite1 \
+  libxcursor1 \
+  libxdamage1 \
+  libxi6 \
+  libxrandr2 \
+  libxss1 \
+  libxtst6 \
+  mesa-utils \
+  ttf-freefont \
   udev \
-  libxss1
+  x11-apps \
+  xserver-xorg-video-all
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install $PKGS_TO_INSTALL  -y --no-install-recommends --allow-downgrades --allow-remove-essential --allow-change-held-packages && \
+RUN apt-get update && \
+    apt-get install -y $PKGS_TO_INSTALL && \
     apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
