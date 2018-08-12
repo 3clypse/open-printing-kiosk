@@ -1,34 +1,44 @@
-FROM node:10
+FROM node:10-stretch
 
 ENV	PKGS_TO_INSTALL \
-	libglib2.0-0 \
-	libnss3 \
-	libgconf-2-4 \
-	libfontconfig \
-	libpangocairo-1.0-0 \
-	libxi6 \
-	libxcursor1 \
-	libxcomposite1 \
-	libasound2 \
-	libxdamage1 \
-	libxtst6 \
-	libxrandr2 \
-	libgtk2.0-0 \
-	libgl1-mesa-glx \
-	libnotify4
+  apt-utils \
+  build-essential \
+  dbus-x11 \
+  libglib2.0-0 \
+  libnss3 \
+  libgconf-2-4 \
+  libfontconfig \
+  libpangocairo-1.0-0 \
+  libxi6 \
+  libxcursor1 \
+  libxcomposite1 \
+  libasound2 \
+  libxdamage1 \
+  libxtst6 \
+  libxrandr2 \
+  libgtk2.0-0 \
+  libgtk-3-0 \
+  mesa-utils \
+  libgl1-mesa-glx \
+  xserver-xorg-video-all \
+  libnotify4 \
+  udev \
+  libxss1
 
-RUN apt-get update && apt-get install $PKGS_TO_INSTALL --no-install-recommends --yes --force-yes
-RUN apt-get autoclean
+ENV DEBIAN_FRONTEND noninteractive
 
+RUN apt-get update && apt-get install $PKGS_TO_INSTALL  -y --no-install-recommends --allow-downgrades --allow-remove-essential --allow-change-held-packages && \
+    apt-get autoclean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN mkdir -p /opt
-WORKDIR /opt
+WORKDIR /tmp
 
-COPY package*.json ./
-
+COPY package.json /tmp/package.json
 RUN npm install
 
-#RUN ln -s /tmp/node_modules node_modules
+RUN mkdir -p /opt && cp -a /tmp/node_modules /opt
 
-#ENTRYPOINT cp -a /tmp/* /opt/
+WORKDIR /opt
+COPY . /opt
+
 CMD ["npm", "start"]
