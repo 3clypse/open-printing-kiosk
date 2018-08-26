@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="_style/browser.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <script src="_scripts/browser.js"></script>
+    </head>
+    <body>
+        <header>
+            <button id='back'><i class="fas fa-arrow-left"></i></button>
+            <button id='forward'><i class="fas fa-arrow-right"></i></button>
+
+            <input type="url" id='address' class='address'/>
+
+            <button id='refresh'><i class="fas fa-redo"></i></button>
+            <button id='dev'/><i class="fas fa-ellipsis-v"></i></button>
+            <button id='dev'/><a href="" onclick="nw.Window.get().close()"><i class="fas fa-times"></i></a></button>
+        </header>
+
+        <div id='splash' class='splash'>
+            nw.js Browser!
+        </div>
+
+        <iframe id='browser' src='about:blank' nwfaketop nwdisable/>
+
+    </body>
+</html>
