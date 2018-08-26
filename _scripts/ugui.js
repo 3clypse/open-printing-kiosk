@@ -1872,7 +1872,7 @@ centerNavLogo();
 
 //When you click on the exit in the navigation, close this instance of NW.js
 $('a[href="#exit"]').click( function() {
-    require("nw.gui").Window.get().close(true);
+    nw.App.quit();
 });
 
 

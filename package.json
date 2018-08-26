@@ -2,7 +2,7 @@
   "name": "open-printing-kiosk",
   "homepage": "https://3clypse.github.io/",
   "version": "0.1.1",
-  "author": "David",
+  "author": "David Ureba Moreno",
   "chromium-args": "--incognito",
   "description": "open-printing-kiosk",
   "keywords": [
@@ -27,20 +27,11 @@
   "node-remote": "http://localhost",
   "window": {
     "title": "open-printing-kiosk",
-    "icon": "_img/icon32.png",
-    "resizable": false,
     "visible": true,
-    "transparent": false,
-    "width": 800,
-    "height": 600,
-    "min_width": 800,
-    "min_height": 600,
     "position": "center",
     "always-on-top": true,
     "show_in_taskbar": false,
-    "fullscreen": false,
-    "kiosk": true,
-    "frame": true
+    "kiosk": true
   },
   "nodejs": true,
   "node-main": "_scripts/node.js",

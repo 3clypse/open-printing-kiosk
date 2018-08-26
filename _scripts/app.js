@@ -6,15 +6,21 @@ function runApp () {
   var gui = require('nw.gui')
 
   $('a[href="#internet"]').click(function () {
-      //console.log("ESTA FUNCIONANDO EL BOTON CON app.js");
-      var internet = gui.Window.open('https://www.viajeselcorteingles.es/documento/pdf_seguro_condicionado.pdf', {
-            frame: true,
-            focus: true,
+      var internet = gui.Window.open('browser.htm', {
             fullscreen: true,
-            id: 'callNotification'
+            focus: true,
+            new_instance: true,
+            id: 'browsing'
       });
-
   });
 
+  $('a[href="#5dmin"]').click(function () {
+      var admin = gui.Window.open('admin.htm', {
+        focus: true,
+        fullscreen: true,
+        new_instance: true,
+        id: 'administration'
+      });
+  });
 
 }// end runApp();
