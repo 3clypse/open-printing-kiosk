@@ -12,7 +12,7 @@ body{
 .splash{
     height:50px;
     width:100%;
-    font-size:40px;
+    font-size:60px;
     line-height: 50px;
     text-align: center;
     position:absolute;
@@ -49,7 +49,7 @@ header{
         padding: 0 3px;
     }
 
-iframe{
+#browser{
     border:none;
     margin:0;
     width:100%;

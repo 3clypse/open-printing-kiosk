@@ -14,7 +14,7 @@ run:
 	$(RUN_COMMAND)
 
 bash:
-	$(RUN_COMMAND) bash
+	$(DEV_COMMAND) bash
 
 clean:
 	docker rm $$(docker ps -a -q)

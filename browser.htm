@@ -6,21 +6,22 @@
     </head>
     <body>
         <header>
-            <button id='back'><i class="fas fa-arrow-left"></i></button>
-            <button id='forward'><i class="fas fa-arrow-right"></i></button>
+            <button id='back' onClick="history.go(-1)"><i class="fas fa-arrow-left"></i></button>
+            <button id='forward' onClick="history.go(1)"><i class="fas fa-arrow-right"></i></button>
 
             <input type="url" id='address' class='address'/>
 
-            <button id='refresh'><i class="fas fa-redo"></i></button>
-            <button id='dev'/><i class="fas fa-ellipsis-v"></i></button>
-            <button id='dev'/><a href="" onclick="nw.Window.get().close()"><i class="fas fa-times"></i></a></button>
+            <button id='refresh' onClick="window.location.reload()"><i class="fas fa-redo"></i></button>
+            <button id='print'onClick="window.print()"/><i class="fas fa-print"></i></button>
+            <button id='close'/><a href="" onclick="nw.Window.get().close()"><i class="fas fa-times"></i></a></button>
         </header>
 
         <div id='splash' class='splash'>
-            nw.js Browser!
+            <i class="fa fa-spinner fa-spin"></i>
         </div>
-
         <iframe id='browser' src='about:blank' nwfaketop nwdisable/>
+        <!--https://developer.chrome.com/apps/tags/webview -->
+      <!--  <webview id="browser" src="http://google.es"></webview>-->
 
     </body>
 </html>
