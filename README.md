@@ -1,4 +1,4 @@
-# [OpenSource] Printing Kiosk.
+# [Open Source] Printing Kiosk.
 ****
 
 Dockerized self-service printer kiosk using web technology [NW.js](http://nwjs.io) & material design [MUI](https://www.muicss.com).
