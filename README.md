@@ -1,7 +1,15 @@
 # [Open Source] Printing Kiosk.
 ****
 
-Dockerized self-service printer kiosk using web technology [NW.js](http://nwjs.io) & material design [MUI](https://www.muicss.com).
+Dockerized self-service printing kiosk using [NW.js](http://nwjs.io) & material design [MUI](https://www.muicss.com).
+
+Printer drivers and support provided by [OpenPrinting](https://wiki.linuxfoundation.org/openprinting/start)
+
+## Basic use
+TO-DO
+
+## Basic Example
+TO-DO
 
 ## Installation & Usage
 
@@ -18,7 +26,7 @@ Dockerized self-service printer kiosk using web technology [NW.js](http://nwjs.i
 5. Run `npm install`
 6. Run `npm start`
 
-## Docker image
+## Docker image & Usage
 TO-DO
 
 ## Credits
