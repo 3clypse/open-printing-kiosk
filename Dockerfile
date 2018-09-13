@@ -41,6 +41,9 @@ RUN npm install
 
 RUN mkdir -p /opt && cp -a /tmp/node_modules /opt
 
+# Fix 'badshmseg' X Server & QT errors
+RUN echo "export QT_X11_NO_MITSHM=1" >> $HOME/.bashrc
+
 WORKDIR /opt
 COPY . /opt
 
