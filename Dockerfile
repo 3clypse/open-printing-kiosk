@@ -1,5 +1,7 @@
+# start from base image
 FROM node:10-stretch
 
+# environment variable (system requirements)
 ENV	PKGS_TO_INSTALL \
   apt-utils \
   build-essential \
@@ -27,24 +29,33 @@ ENV	PKGS_TO_INSTALL \
   x11-apps \
   xserver-xorg-video-all
 
+# environment variable
 ENV DEBIAN_FRONTEND noninteractive
 
+# install system requirements
 RUN apt-get update && \
     apt-get install -y $PKGS_TO_INSTALL && \
     apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# working directory
 WORKDIR /tmp
-
+# copy our application config file
 COPY package.json /tmp/package.json
-RUN npm install
 
+# install all requirements
+RUN npm install
+# create workdir
 RUN mkdir -p /opt && cp -a /tmp/node_modules /opt
 
 # Fix 'badshmseg' X Server & QT errors
 RUN echo "export QT_X11_NO_MITSHM=1" >> $HOME/.bashrc
 
+# working directory
 WORKDIR /opt
+# copy our application code
+# COPY vs ADD -> https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#add-or-copy
 COPY . /opt
 
+# start app
 CMD ["npm", "start"]
