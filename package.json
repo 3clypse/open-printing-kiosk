@@ -3,7 +3,7 @@
   "homepage": "https://3clypse.github.io/",
   "version": "0.1.1",
   "author": "David Ureba Moreno",
-  "chromium-args": "--incognito --disable-print-preview",
+  "chromium-args": "--incognito --disable-print-preview --enable-logging=stderr",
   "description": "open-printing-kiosk",
   "keywords": [
     "opensource",
