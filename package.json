@@ -13,12 +13,10 @@
   "maintainers": [
     "David <3clypse@users.noreply.github.com> (https://3clypse.github.io/)"
   ],
-  "repository": [
-    {
-      "type": "git",
-      "url": "git://github.com/3clypse/open-printing-kiosk.git"
-    }
-  ],
+  "repository": [{
+    "type": "git",
+    "url": "git://github.com/3clypse/open-printing-kiosk.git"
+  }],
   "bugs": {
     "url": "https://github.com/3clypse/open-printing-kiosk/issues"
   },

@@ -1,64 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
 
-    <!-- Automatically updated by your package.json file. -->
-    <title class="applicationTitle">appName</title>
+<head>
+  <!-- Automatically updated by your package.json file. -->
+  <title class="applicationTitle">appName</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="_style/animate.min.css">
+  <link rel="stylesheet" href="_style/mui-colors.min.css">
+  <link rel="stylesheet" href="_style/style.css">
+  <!-- UGUI requires jQuery 1.9.1 or above. -->
+  <script type="text/javascript" src="_scripts/mui-combined.min.js"></script>
+  <script type="text/javascript" src="_scripts/ven.jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="_scripts/ugui.js"></script>
+  <script type="text/javascript" src="_scripts/app.js"></script>
+</head>
+<!-- Change the class form dev to prod when you're ready to distribute your application. -->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="_img/favicon.ico">
-    <!-- <link rel="stylesheet" href="_style/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="_style/animate.min.css">
-    <link rel="stylesheet" href="_style/mui-colors.min.css">
-    <link rel="stylesheet" href="_style/ugui-devtools.css">
-    <link rel="stylesheet" href="_style/style.css">
-
-    <!-- <style type="text/css">.thumbnail {border:none ; !important} </style> -->
-
-    <!-- UGUI requires jQuery 1.9.1 or above. -->
-    <script type="text/javascript" src="_scripts/mui-combined.min.js"></script>
-    <script type="text/javascript" src="_scripts/ven.jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="_scripts/ugui.js"></script>
-    <script type="text/javascript" src="_scripts/admin.js"></script>
-    <script type="text/javascript" src="_scripts/app.js"></script>
-
-  </head>
-
-  <!-- Change the class form dev to prod when you're ready to distribute your application. -->
-  <body role="document" class="prod">
-    <header class="mui-appbar mui--z1">
-      <div class="mui-container">
-        <table>
-          <tr class="mui--appbar-height">
-            <td class="mui--text-title">Open Printing Kiosk</td>
-            <td class="mui--text-right">
-              <ul class="mui-list--inline mui--text-body2">
-                <li><a href="" onclick="nw.Window.get().close()">Salir</a></li>
-                <!--<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>-->
-              </ul>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </header>
-    <div id="content-wrapper" class="mui--text-center">
-      <div class="mui--appbar-height"></div>
-      <br>
-      <br>
-      <div class="mui--text-display3 row wow zoomInDown">ADMINISTRACIÓN</div>
-
+<body role="document" class="prod">
+  <header class="mui-appbar mui--z1">
+    <div class="mui-container">
+      <table>
+        <tr class="mui--appbar-height">
+          <td class="mui--text-title">Open Printing Kiosk</td>
+          <td class="mui--text-right">
+            <ul class="mui-list--inline mui--text-body2">
+              <li><a href="" onclick="nw.Window.get().close()">Salir</a></li>
+              <!--<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>-->
+            </ul>
+          </td>
+        </tr>
+      </table>
     </div>
-    <footer>
-      <div class="mui-container mui--text-center mui--text-bottom">
-      </div>
-    </footer>
-    <script src="_scripts/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
+  </header>
+  <div id="content-wrapper" class="mui--text-center">
+    <div class="mui--appbar-height"></div>
+    <br>
+    <br>
+    <div class="mui--text-display3 row wow zoomInDown">ADMINISTRACIÓN</div>
 
-  </body>
+  </div>
+
+  <footer>
+    <div class="mui-container mui--text-center mui--text-bottom">
+    </div>
+  </footer>
+
+  <script src="_scripts/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+</body>
+
 </html>

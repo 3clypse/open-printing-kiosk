@@ -1,27 +1,33 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="_style/browser.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <script src="_scripts/browser.js"></script>
-    </head>
-    <body>
-        <header>
-            <button id='back' onClick="history.go(-1)"><i class="fas fa-arrow-left"></i></button>
-            <button id='forward' onClick="history.go(1)"><i class="fas fa-arrow-right"></i></button>
 
-            <input type="url" id='address' class='address'/>
+<head>
+  <link rel="stylesheet" href="_style/browser.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script type="text/javascript" src="_scripts/mui-combined.min.js"></script>
+  <script type="text/javascript" src="_scripts/ven.jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="_scripts/ugui.js"></script>
+  <script src="_scripts/browser.js"></script>
+</head>
 
-            <button id='refresh' onClick="window.location.reload()"><i class="fas fa-redo"></i></button>
-            <button id='print'onClick="window.print()"/><i class="fas fa-print"></i></button>
-            <button id='close'/><a href="" onclick="nw.Window.get().close()"><i class="fas fa-times"></i></a></button>
-        </header>
+<body>
+  <header>
+    <button id='back' onClick="history.go(-1)"><i class="fas fa-arrow-left"></i></button>
+    <button id='forward' onClick="history.go(1)"><i class="fas fa-arrow-right"></i></button>
 
-        <div id='splash' class='splash'>
-            <i class="fa fa-spinner fa-spin"></i>
-        </div>
-        <iframe id='browser' src='about:blank' nwfaketop nwdisable/>
-        <!--https://developer.chrome.com/apps/tags/webview -->
-      <!--  <webview id="browser" src="http://google.es"></webview>-->
+    <input type="url" id='address' class='address' />
 
-    </body>
+    <button id='refresh' onClick="window.location.reload()"><i class="fas fa-redo"></i></button>
+    <button id='print' onClick="window.print()" /><i class="fas fa-print"></i></button>
+    <button id='close' /><a href="" onclick="nw.Window.get().close()"><i class="fas fa-times"></i></a></button>
+  </header>
+
+  <div id='splash' class='splash'>
+    <i class="fa fa-spinner fa-spin"></i>
+  </div>
+  <iframe id='browser' src='about:blank' nwfaketop nwdisable/>
+  <!--https://developer.chrome.com/apps/tags/webview -->
+  <!--  <webview id="browser" src="http://google.es"></webview>-->
+
+</body>
+
 </html>
