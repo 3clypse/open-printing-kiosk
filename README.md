@@ -3,7 +3,7 @@
 
 Dockerized self-service printing kiosk using [NW.js](http://nwjs.io) & material design [MUI](https://www.muicss.com).
 
-Printer drivers and support provided by [OpenPrinting](https://wiki.linuxfoundation.org/openprinting/start)
+Printer driver support provided by [OpenPrinting](https://wiki.linuxfoundation.org/openprinting/start)
 
 ## Basic use
 TO-DO
