@@ -40,11 +40,14 @@ RUN apt-get update && \
 
 # working directory
 WORKDIR /tmp
+
 # copy our application config file
 COPY package.json /tmp/package.json
 
 # install all requirements
 RUN npm install
+RUN npm install -g file-browser
+
 # create workdir
 RUN mkdir -p /opt && cp -a /tmp/node_modules /opt
 
@@ -58,4 +61,4 @@ WORKDIR /opt
 COPY . /opt
 
 # start app
-CMD ["npm", "start"]
+CMD ./boot.sh

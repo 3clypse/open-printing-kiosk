@@ -1,36 +1,50 @@
-var menu = new nw.Menu({ type: 'menubar' });
+jQuery(function($) {
+  var $bodyEl = $('body'),
+      $sidedrawerEl = $('#sidedrawer');
 
-var submenu = new nw.Menu();
-submenu.append(new nw.MenuItem({
-    label: 'Salir',
-    click: function(){
-        nw.App.quit();
-    }
-}));
 
-menu.append(new nw.MenuItem({
-    label: 'Archivo',
-    submenu: submenu
-}));
-menu.append(new nw.MenuItem({
-    label: 'Servicios',
-    click: function(){
-        console.log('open new page');
-        var parentWin = window;
+  // ==========================================================================
+  // Toggle Sidedrawer
+  // ==========================================================================
+  function showSidedrawer() {
+    // show overlay
+    var options = {
+      onclose: function() {
+        $sidedrawerEl
+          .removeClass('active')
+          .appendTo(document.body);
+      }
+    };
 
-        if(parentWin.localStorage.getItem('child_open')) {
-            console.log('child window is already open');
-            return;
-        }
+    var $overlayEl = $(mui.overlay('on', options));
 
-        nw.Window.open('https://google.es', {}, function(win) {
-            parentWin.localStorage.setItem('child_open', true);
+    // show element
+    $sidedrawerEl.appendTo($overlayEl);
+    setTimeout(function() {
+      $sidedrawerEl.addClass('active');
+    }, 20);
+  }
 
-            win.on('closed', function() {
-                parentWin.localStorage.removeItem('child_open');
-            });
-        });
-    }
-}));
 
-nw.Window.get().menu = menu;
+  function hideSidedrawer() {
+    $bodyEl.toggleClass('hide-sidedrawer');
+  }
+
+
+  $('.js-show-sidedrawer').on('click', showSidedrawer);
+  $('.js-hide-sidedrawer').on('click', hideSidedrawer);
+
+
+  // ==========================================================================
+  // Animate menu
+  // ==========================================================================
+  var $titleEls = $('strong', $sidedrawerEl);
+
+  $titleEls
+    .next()
+    .hide();
+
+  $titleEls.on('click', function() {
+    $(this).next().slideToggle(200);
+  });
+});

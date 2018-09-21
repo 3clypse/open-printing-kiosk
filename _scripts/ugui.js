@@ -102,18 +102,16 @@
 //### A01. UGUI Start
 //
 
-//Wait for the document to load before running ugui.js. Use either runUGUI or waitUGUI for immediate or delayed launch.
-$(document).ready( runUGUI );
 
 //This lets you open NW.js, then immediately launch the Webkit Developer Tools, then a few seconds later run UGUI.
 //Good for hitting a debugger in time, as often the JS runs before the Webkit Developer Tools can open.
 function waitUGUI() {
     require("nw.gui").Window.get().showDevTools();
-    setTimeout(runUGUI, 6000);
+    setTimeout(runApp, 6000);
 }
 
 //Container for all UGUI components
-function runUGUI() {
+function runApp() {
 
 //This is the one place where the UGUI version is declared
 var uguiVersion = "1.3.0";
@@ -1870,10 +1868,7 @@ function centerNavLogo() {
 //Run once on page load
 centerNavLogo();
 
-//When you click on the exit in the navigation, close this instance of NW.js
-$('a[href="#exit"]').click( function() {
-    nw.App.quit();
-});
+
 
 
 

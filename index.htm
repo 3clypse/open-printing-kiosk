@@ -7,29 +7,29 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="_style/font-awesome.css">
   <link rel="stylesheet" href="_style/animate.min.css">
+  <link rel="stylesheet" href="_style/mui.min.css">
   <link rel="stylesheet" href="_style/mui-colors.min.css">
-  <link rel="stylesheet" href="_style/style.css">
+  <link rel="stylesheet" href="_style/home.css">
   <!-- UGUI requires jQuery 1.9.1 or above. -->
-  <script type="text/javascript" src="_scripts/mui-combined.min.js"></script>
   <script type="text/javascript" src="_scripts/ven.jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="_scripts/mui.min.js"></script>
   <script type="text/javascript" src="_scripts/ugui.js"></script>
   <script type="text/javascript" src="_scripts/app.js"></script>
 </head>
-<!-- Change the class form dev to prod when you're ready to distribute your application. -->
 
+<!-- Change the class form dev to prod when you're ready to distribute your application. -->
 <body role="document" class="prod">
   <header class="mui-appbar mui--z1">
     <div class="mui-container">
       <table>
         <tr class="mui--appbar-height">
-          <td class="mui--text-title">Open Printing Kiosk</td>
+          <td class="mui--text-title"><i class="fa fa-print mui--text-display1 row wow zoomIn" aria-hidden="true"></i> Open Printing Kiosk</td>
           <td class="mui--text-right">
             <ul class="mui-list--inline mui--text-body2">
-              <li><a href="#internet">Acceso a internet</a></li>
-              <li><a href="#exit">Salir</a></li>
-              <!--<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>-->
+              <li><a class="mui--text-title" href="#internet">Acceso a internet</a></li>
+              <li><a class="mui--text-title" href="#exit">Salir</a></li>
             </ul>
           </td>
         </tr>
@@ -40,17 +40,34 @@
     <div class="mui--appbar-height"></div>
     <br>
     <br>
-    <div class="mui--text-display3 row wow zoomInDown">Bienvenido a Open Printing Kiosk</div>
-    <br>
-    <br>
-    <button class="mui-btn mui-btn--raised">INICIAR</button>
-    <br>
-    <br>
-    <i class="fa fa-university fa-5x mui--color-pink-A100 mui--text-display3 row wow zoomIn" aria-hidden="true"></i>
+    <!--<div class="mui--text-display3 row wow zoomInDown">Bienvenido</div>-->
+<div class="mui-container">
+<div class="mui-row mui--text-left">
+  <div class="mui-col-md-6">
+        <div class="mui--text-display3">Información general</div>
+        <h3>
+          En la parte superior izquierda dispone la posibilidad de acceder a internet
+          o salir de la aplicación.
+        </h3>
+        <h3>
+          En la parte derecha podrá ver listado los ficheros que desee.
+        </h3>
+    </div>
+    <div class="mui-col-md-6">
+          <div class="mui--text-display3">Listado de ficheros</div>
+          <h3>
+            En la parte inferior podrá observar los ficheros que desee:
+          </h3>
+          <iframe src='http://127.0.0.1:8088' height="470px" width="100%" frameborder="0" scrolling="no"></iframe>
+      </div>
+</div>
+</div>
   </div>
   <footer>
     <div class="mui-container mui--text-center mui--text-bottom">
-      <a href="#5dmin">ADMIN</a>
+      <a class="btn btn-default" href="#5dmin" aria-label="Settings">
+        <i class="fa fa-cog" aria-hidden="true"></i>Administración
+      </a>
     </div>
   </footer>
   <script src="_scripts/wow.min.js"></script>

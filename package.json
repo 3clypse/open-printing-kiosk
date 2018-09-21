@@ -39,7 +39,8 @@
     "plugin": true
   },
   "dependencies": {
-    "nw": "^0.32"
+    "nw": "^0.32",
+    "file-browser": "^0.0.5"
   },
   "scripts": {
     "start": "nw ."

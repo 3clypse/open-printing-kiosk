@@ -34,4 +34,5 @@ TO-DO
 * [MUI](https://www.muicss.com)
 * [OpenPrinting](https://wiki.linuxfoundation.org/openprinting/start)
 * [nwjs Browser Framework](https://github.com/RIAEvangelist/nwjs-browser-framework)
+* [file-browser](https://www.npmjs.com/package/file-browser)
 * [UGUI Team](https://github.com/UniversalGUI/UGUI)
