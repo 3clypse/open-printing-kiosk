@@ -1,7 +1,7 @@
 {
   "name": "open-printing-kiosk",
   "homepage": "https://3clypse.github.io/",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "David Ureba Moreno",
   "chromium-args": "--incognito --disable-print-preview --enable-logging=stderr",
   "description": "open-printing-kiosk",
@@ -13,10 +13,12 @@
   "maintainers": [
     "David <3clypse@users.noreply.github.com> (https://3clypse.github.io/)"
   ],
-  "repository": [{
-    "type": "git",
-    "url": "git://github.com/3clypse/open-printing-kiosk.git"
-  }],
+  "repository": [
+    {
+      "type": "git",
+      "url": "git://github.com/3clypse/open-printing-kiosk.git"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/3clypse/open-printing-kiosk/issues"
   },
@@ -39,8 +41,7 @@
     "plugin": true
   },
   "dependencies": {
-    "nw": "^0.32",
-    "file-browser": "^0.0.5"
+    "nw": "^0.33.3"
   },
   "scripts": {
     "start": "nw ."
