@@ -51,14 +51,16 @@ RUN npm install -g file-browser
 # create workdir
 RUN mkdir -p /opt && cp -a /tmp/node_modules /opt
 
-# Fix 'badshmseg' X Server & QT errors
-RUN echo "export QT_X11_NO_MITSHM=1" >> $HOME/.bashrc
-
 # working directory
 WORKDIR /opt
+
 # copy our application code
 # COPY vs ADD -> https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#add-or-copy
 COPY . /opt
 
+# working directory
+RUN mkdir -p /home/node/app
+WORKDIR /home/node/app
+
 # start app
-CMD ./boot.sh
+CMD /opt/boot.sh
