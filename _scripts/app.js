@@ -1,6 +1,20 @@
 // Wait for the document to load and for ugui.js to run before running your app's custom JS
 $(document).ready(runApp)
 var adminTriesNumber = 0
+var fs = require('fs');
+var sha512 = require('js-sha512');
+
+fs.readFile(
+    './hash.config.json',
+    {
+       encoding:'utf8'
+    },
+    function (err, data) {
+        if (err) console.warn(err);
+
+        config=JSON.parse(data);
+    }
+);
 
 
 
@@ -24,7 +38,7 @@ function runApp () {
   $('a[href="#5dmin"]').click(function () {
       if (adminTriesNumber < 3) {
           var pass = prompt("Clave de acceso", "");
-          if(pass != null && pass=='0000'){
+          if(pass != null && sha512(pass)==config.hash){
             var admin = gui.Window.open('admin.htm', {
               focus: true,
               fullscreen: true,

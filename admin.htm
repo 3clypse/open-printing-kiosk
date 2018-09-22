@@ -3,7 +3,7 @@
 
 <head>
   <!-- Automatically updated by your package.json file. -->
-  <title class="applicationTitle">appName</title>
+  <title class="applicationTitle">Open Printing Kiosk</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="_style/mui.min.css">
   <link rel="stylesheet" href="_style/admin.css">
   <!-- UGUI requires jQuery 1.9.1 or above. -->
-  <script type="text/javascript" src="_scripts/ven.jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="_scripts/mui.min.js"></script>
+  <script type="text/javascript" src="_scripts/ven.jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="_scripts/ugui.js"></script>
-  <script type="text/javascript" src="_scripts/admin.js"></script>
+  <script type="text/javascript" src="_scripts/admin.js">require('./_scripts/admin.js')</script>
 </head>
 <!-- Change the class form dev to prod when you're ready to distribute your application. -->
 
@@ -26,23 +26,18 @@
     <div class="mui-divider"></div>
     <ul>
       <li>
-        <strong>Category 1</strong>
+        <strong>Herramientas</strong>
         <ul>
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
+          <li><a href="#cups">Abrir CUPS</a></li>
         </ul>
       </li>
       <li>
-        <strong>Category 2</strong>
+        <strong>Modificar</strong>
         <ul>
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
+          <li><a href="#modPass">Contraseña administración</a></li>
         </ul>
       </li>
-      <li><a href="" onclick="nw.Window.get().close()"><strong>Salir</strong></a>
-      </li>
+      <li><a href="" onclick="nw.Window.get().close()" class="mui--text-danger"><strong>Salir</strong></a></li>
     </ul>
   </div>
   <header id="header">
@@ -58,16 +53,9 @@
     <div class="mui--appbar-height"></div>
     <div class="mui-container-fluid">
       <br>
-      <h1>Brand.io</h1>
+      <h1>Open Printing Kiosk</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sollicitudin volutpat molestie. Nullam id tempor nulla. Aenean sit amet urna et elit pharetra consequat. Aliquam fringilla tortor vitae lectus tempor, tempor bibendum nunc elementum.
-        Etiam ultrices tristique diam, vitae sodales metus bibendum id. Suspendisse blandit ligula eu fringilla pretium. Mauris dictum gravida tortor eu lacinia. Donec purus purus, ornare sit amet consectetur sed, dictum sit amet ex. Vivamus sit amet
-        imperdiet tellus. Quisque ultrices risus a massa laoreet, vitae tempus sem congue. Maecenas nec eros ut lectus vehicula rutrum. Donec consequat tincidunt arcu non faucibus. Duis elementum, ante venenatis lacinia cursus, turpis massa congue magna,
-        sed dapibus felis nibh sed tellus. Nam consectetur non nibh vitae sodales. Pellentesque malesuada dolor nec mi volutpat, eget vehicula eros ultrices.</p>
-      <p>Aenean vehicula tortor a tellus porttitor, id elementum est tincidunt. Etiam varius odio tortor. Praesent vel pulvinar sapien. Praesent ac sodales sem. Phasellus id ultrices massa. Sed id erat sit amet magna accumsan vulputate eu at quam. Etiam
-        feugiat semper imperdiet. Sed a sem vitae massa condimentum vestibulum. In vehicula, quam vel aliquet aliquam, enim elit placerat libero, at pretium nisi lorem in ex. Vestibulum lorem augue, semper a efficitur in, dictum vitae libero. Donec velit
-        est, sollicitudin a volutpat quis, iaculis sit amet metus. Nulla at ante nec dolor euismod mattis cursus eu nisl.</p>
-      <p>Quisque interdum facilisis consectetur. Nam eu purus purus. Curabitur in ligula quam. Nam euismod ligula eu tellus pellentesque laoreet. Aliquam erat volutpat. Curabitur eu bibendum velit. Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Nunc efficitur lorem sit amet quam porta pharetra. Cras ultricies pellentesque eros sit amet semper.</p>
+      </p>
     </div>
   </div>
   <footer>

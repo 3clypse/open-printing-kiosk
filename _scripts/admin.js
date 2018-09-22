@@ -1,50 +1,37 @@
-jQuery(function($) {
-  var $bodyEl = $('body'),
-      $sidedrawerEl = $('#sidedrawer');
+var $ = require('jquery');
+window.jQuery = $;
+$(document).ready(runApp)
 
+var fs = require('fs');
+var gui = require('nw.gui')
+var sha512 = require('js-sha512');
 
-  // ==========================================================================
-  // Toggle Sidedrawer
-  // ==========================================================================
-  function showSidedrawer() {
-    // show overlay
-    var options = {
-      onclose: function() {
-        $sidedrawerEl
-          .removeClass('active')
-          .appendTo(document.body);
+function runApp () {
+  $('a[href="#modPass"]').click(function () {
+      var pass = prompt("Clave de acceso nueva", "");
+      if(pass != null){
+
+        raw = {  
+            "hash": sha512(pass)
+        };            
+
+        console.log(raw)
+        data = JSON.stringify(raw);
+        console.log(data)
+        fs.writeFileSync('./hash.config.json', data, {encoding:'utf8',flag:'w'}); 
+
+        alert("La clave se ha cambiado con éxito.")
       }
-    };
-
-    var $overlayEl = $(mui.overlay('on', options));
-
-    // show element
-    $sidedrawerEl.appendTo($overlayEl);
-    setTimeout(function() {
-      $sidedrawerEl.addClass('active');
-    }, 20);
-  }
-
-
-  function hideSidedrawer() {
-    $bodyEl.toggleClass('hide-sidedrawer');
-  }
-
-
-  $('.js-show-sidedrawer').on('click', showSidedrawer);
-  $('.js-hide-sidedrawer').on('click', hideSidedrawer);
-
-
-  // ==========================================================================
-  // Animate menu
-  // ==========================================================================
-  var $titleEls = $('strong', $sidedrawerEl);
-
-  $titleEls
-    .next()
-    .hide();
-
-  $titleEls.on('click', function() {
-    $(this).next().slideToggle(200);
   });
-});
+
+
+  $('a[href="#cups"]').click(function () {
+      var internet = gui.Window.open('http://localhost:631', {
+            focus: true,
+            new_instance: true,
+            id: 'cups'
+      })
+  });
+
+
+}
