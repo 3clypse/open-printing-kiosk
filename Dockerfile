@@ -55,7 +55,8 @@ RUN mkdir -p /opt && cp -a /tmp/node_modules /opt
 WORKDIR /opt
 
 # copy our application code
-# COPY vs ADD -> https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#add-or-copy
+# COPY vs ADD -> 
+# https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#add-or-copy
 COPY . /opt
 
 # working directory
