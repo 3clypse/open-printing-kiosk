@@ -1,68 +1,109 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <!-- Automatically updated by your package.json file. -->
-  <title class="applicationTitle">Open Printing Kiosk</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="_style/font-awesome.css">
-  <link rel="stylesheet" href="_style/animate.min.css">
+    <title class="applicationTitle">Open Printing Kiosk</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="_style/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="_style/font-awesome.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="_style/mui.min.css">
   <link rel="stylesheet" href="_style/mui-colors.min.css">
   <link rel="stylesheet" href="_style/home.css">
-  <!-- UGUI requires jQuery 1.9.1 or above. -->
-  <script type="text/javascript" src="_scripts/ven.jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="_scripts/mui.min.js"></script>
-  <script type="text/javascript" src="_scripts/ugui.js"></script>
-  <script type="text/javascript" src="_scripts/app.js"></script>
-</head>
+    <link rel="stylesheet" href="_style/material-cards-auto-height.css">
+    <style type="text/css">
 
-<!-- Change the class form dev to prod when you're ready to distribute your application. -->
-<body role="document" class="prod mui--no-user-select">
-  <header class="mui-appbar mui--z1">
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            background-color: #ECEFF1;
+            color: #37474F;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            font-size: 2em;
+        }
+
+        h1, h2, h3 {
+            font-weight: 200;
+        }
+
+        .grid-item {
+            width: 390px;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<header class="mui-appbar mui--z1" style="z-index: 99;">
     <div class="mui-container">
       <table>
         <tr class="mui--appbar-height">
-          <td class="mui--text-title"><i class="fa fa-print mui--text-display1 row wow zoomIn" aria-hidden="true"></i> Open Printing Kiosk</td>
-          <td class="mui--text-right">
-            <ul class="mui-list--inline mui--text-body2">
-              <li><a class="mui--text-title" href="#internet">Acceso a internet</a></li>
-              <li><a class="mui--text-title" href="#exit"><strong>Salir</strong></a></li>
-            </ul>
-          </td>
+          <td class="mui--text-display3"><i class="material-icons" style="font-size: 1.3em !important; vertical-align: middle;">print</i> Open Printing Kiosk</td>
         </tr>
       </table>
     </div>
   </header>
-  <div id="content-wrapper" class="mui--text-center">
-    <div class="mui--appbar-height"></div>
-    <br>
-    <br>
-    <!--<div class="mui--text-display3 row wow zoomInDown">Bienvenido</div>-->
-<div class="mui-container">
-<div class="mui-row mui--text-left">
-  <div class="mui-col-md-6">
-        <div class="mui--text-display2"><strong>Información general</strong></div>
-        <h3>
-          En la parte superior derecha dispone la posibilidad de acceder a internet
-          o salir de la aplicación.
-        </h3>
-        <h3>
-          Justo a la derecha de este texto, podrá ver listado los ficheros que desee.
-        </h3>
+<section class="container">
+    <div class="page-header">
+        <br>
     </div>
-    <div class="mui-col-md-6">
-          <div class="mui--text-display2"><strong>Listado de ficheros</strong></div>
-          <h3>
-            En la parte inferior podrá acceder a los ficheros que desee:
-          </h3>
-          <iframe src='http://127.0.0.1:8088' height="440px" width="100%" frameborder="0" scrolling="no"></iframe>
-      </div>
-</div>
-</div>
-  </div>
+    <div class="row active-with-click grid">
+        <div class="grid-item">
+            <article class="material-card Green">
+                <h2>
+                    <span><b>Visualizar ficheros</b></span>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container" style="background-color: #F1BF26">
+                        <iframe src='http://127.0.0.1:8088' height="490px" width="140%" frameborder="0" scrolling="no" style="margin-top:-90px;margin-left:-48px"></iframe>
+                    </div>
+                    <div class="mc-description">
+                        ...
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="grid-item">
+            <article class="material-card Orange">
+                <h2>
+                    <span><b>Acceder a internet</b></span>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container" style="background-color: #F1BF26;">
+                        <a href="#internet"><i class="material-icons" style="font-size: 12em !important; padding: 15%;">cloud</i>
+                    </div>
+                    <div class="mc-description">
+                        <p>Desde aquí, podrás navegar por internet e imprimir lo que necesites.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="grid-item">
+            <article class="material-card Red">
+                <h2>
+                    <span><b>Salir de la aplicación</b></span>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container" style="background-color: #ff7961";>
+                       <a href="#exit"><i class="material-icons" style="font-size: 12em !important; padding: 15%;color: #ba000d
+
+!important;">power_settings_new</i>
+                    </div>
+                    <div class="mc-description">
+                        ...
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
   <footer>
     <div class="mui-container mui--text-center mui--text-bottom">
       <a class="btn btn-default" href="#5dmin" aria-label="Settings">
@@ -70,11 +111,28 @@
       </a>
     </div>
   </footer>
-  <script src="_scripts/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
 
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="_scripts/mui.min.js"></script>
+<script src="_scripts/ugui.js"></script>
+<script src="_scripts/app.js"></script>
+<script src="_scripts/jquery.material-cards.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script>
+    $(function() {
+
+        var $grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 390,
+        });
+
+        $('.material-card').materialCard();
+
+        $('.material-card').on('shown.material-card hidden.material-card', function (event) {
+            $grid.masonry();
+        });
+
+    });
+</script>
 </body>
-
 </html>

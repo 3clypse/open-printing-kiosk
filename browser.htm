@@ -3,9 +3,11 @@
 <head>
   <link rel="stylesheet" href="_style/browser.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <script type="text/javascript" src="_scripts/mui-combined.min.js"></script>
-  <script type="text/javascript" src="_scripts/ven.jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="_scripts/ugui.js"></script>
+  <script src="_scripts/mui-combined.min.js"></script>
+  <script src="_scripts/ven.jquery-2.1.1.min.js"></script>
+  <script src="admin/plugins/jquery/jquery.min.js"></script>
+  <script src="_scripts/ugui.js"></script>
+  <script src="_scripts/app.js"></script>
   <script src="_scripts/browser.js"></script>
 </head>
 
@@ -18,12 +20,13 @@
 
     <button id='refresh' onClick="window.location.reload()"><i class="fas fa-redo"></i></button>
     <button id='print' onClick="window.print()" /><i class="fas fa-print"></i></button>
-    <button id='close' /><a href="" onclick="nw.Window.get().close()"><i class="fas fa-times mui--text-danger"></i></a></button>
+    <button id='close' /><a href="#appExit"><i class="fas fa-times mui--text-danger"></i></a></button>
   </header>
 
   <div id='splash' class='splash'>
     <i class="fa fa-spinner fa-spin"></i>
   </div>
+
   <iframe id='browser' src='about:blank' nwfaketop nwdisable></iframe>
   <!--https://developer.chrome.com/apps/tags/webview -->
   <!--  <webview id="browser" src="http://google.es"></webview>-->

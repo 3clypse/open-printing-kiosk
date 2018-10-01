@@ -42,6 +42,13 @@ header table {
   width: 100%;
 }
 
+.page-header {
+  line-height: 80px !important;
+}
+
+.mui--text-display3 {
+  line-height: 90px !important;
+}
 
 /**
  * Content CSS
@@ -61,8 +68,8 @@ header table {
 
 footer {
   box-sizing: border-box;
-  height: 80px;
+  height: 10px !important;
   background-color: #eee;
   border-top: 1px solid #e0e0e0;
-  padding-top: 15px;
+  padding-top: 50px;
 }

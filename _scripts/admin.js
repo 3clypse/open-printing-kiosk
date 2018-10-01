@@ -1,10 +1,9 @@
-var $ = require('jquery');
-window.jQuery = $;
 $(document).ready(runApp)
 
 var fs = require('fs');
-var gui = require('nw.gui')
 var sha512 = require('js-sha512');
+var gui = require('nw.gui')
+var win = gui.Window.get();
 
 function runApp () {
   $('a[href="#modPass"]').click(function () {
