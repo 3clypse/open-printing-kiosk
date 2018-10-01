@@ -5,6 +5,12 @@ Dockerized self-service printing kiosk using [NW.js](http://nwjs.io) & material 
 
 Printer driver support provided by [OpenPrinting](https://wiki.linuxfoundation.org/openprinting/start)
 
+## Demo
+<img src="https://raw.githubusercontent.com/3clypse/open-printing-kiosk/master/img/home.png" alt="home" width=auto/>
+<img src="https://raw.githubusercontent.com/3clypse/open-printing-kiosk/master/img/browsing.png" alt="browsing" width=auto/>
+<img src="https://raw.githubusercontent.com/3clypse/open-printing-kiosk/master/img/admin.png" alt="admin" width=auto/>
+
+
 ## Basic use
 TO-DO
 
