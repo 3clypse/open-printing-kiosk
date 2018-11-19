@@ -11,29 +11,20 @@ Printer driver support provided by [OpenPrinting](https://wiki.linuxfoundation.o
 <img src="https://raw.githubusercontent.com/3clypse/open-printing-kiosk/master/img/admin.png" alt="admin" width=auto/>
 
 
-## Basic use
-TO-DO
+## Installation & Usage ##
 
-## Basic Example
-TO-DO
+### How to run using Docker ###
 
-## Installation & Usage
+1.  Open a terminal and run:
+    ```sh
+    $ make build
+    ```
 
-**If you have nw.js installed:**
-1. Download latest [release](https://github.com/3clypse/open-printing-kiosk/releases)
-2. Extract it
-3. Run `npm install`
-4. Run `npm start`
+2.  Run the following code to run the webApp:
+    ```sh
+    $ make
+    ```
 
-**If not:**
-1. Download [NW.js](http://nwjs.io/)
-2. Download latest [release](https://github.com/3clypse/open-printing-kiosk/releases)
-3. Extract it
-5. Run `npm install`
-6. Run `npm start`
-
-## Docker image & Usage
-TO-DO
 
 ## Credits
 * [NW.js](https://nwjs.io/)
