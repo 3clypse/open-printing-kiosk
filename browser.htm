@@ -19,7 +19,7 @@
     <input type="url" id='address' class='address' />
 
     <button id='refresh' onClick="window.location.reload()"><i class="fas fa-redo"></i></button>
-    <button id='print' onClick="window.print()" /><i class="fas fa-print"></i></button>
+    <button id='print' /><a href="#browserPrint"><i class="fas fa-print"></i></a></button>
     <button id='close' /><a href="#appExit"><i class="fas fa-times mui--text-danger"></i></a></button>
   </header>
 
@@ -32,5 +32,12 @@
   <!--  <webview id="browser" src="http://google.es"></webview>-->
 
 </body>
+
+<script type="text/javascript">
+    function bodyPrint() {
+      nwjsBrowser=document.querySelector('#browser');
+      nwjsBrowser.contentWindow.print();
+    }
+</script>
 
 </html>

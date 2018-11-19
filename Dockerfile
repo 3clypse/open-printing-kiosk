@@ -63,5 +63,7 @@ COPY . /opt
 RUN mkdir -p /home/node/app
 WORKDIR /home/node/app
 
+RUN cp /opt/sample/*.pdf /home/node/app
+
 # start app
 CMD /opt/boot.sh

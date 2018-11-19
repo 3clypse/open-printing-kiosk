@@ -27,6 +27,12 @@ function runApp () {
       nw.Window.get().close();
   });
 
+  //When you click on the exit in the navigation, close this instance of NW.js
+  $('a[href="#browserPrint"]').click( function() {
+      nwjsBrowser=document.querySelector('#browser');
+      nwjsBrowser.contentWindow.print();
+  });
+
   $('a[href="#internet"]').click(function () {
       var internet = gui.Window.open('browser.htm', {
             fullscreen: true,
@@ -60,19 +66,22 @@ function runApp () {
   });
 
   $('a[href="#modPass"]').click(function () {
-      //var pass = prompt("Clave de acceso nueva", "");
-      alert("La clave se ha cambiado con éxito.")
-      if(pass != null){
+      var pass = prompt("Clave de acceso nueva", "");
 
-        raw = {  
+      if(pass != null && pass != ""){
+
+        raw = {
             "hash": sha512(pass)
-        };            
+        };
 
         data = JSON.stringify(raw);
-        fs.writeFileSync('./hash.config.json', data, {encoding:'utf8',flag:'w'}); 
+        fs.writeFileSync('./hash.config.json', data, {encoding:'utf8',flag:'w'});
 
         alert("La clave se ha cambiado con éxito.")
       }
+     else{
+	alert("Clave no modificada")
+     }
   });
 
   $('a[href="#cups"]').click(function () {

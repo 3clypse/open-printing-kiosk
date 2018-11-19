@@ -65,5 +65,4 @@ function navigate(e){
 
 function updateAddressBar(){
   nwjsHeader.querySelector('#address').value=nwjsBrowser.contentWindow.location.href
-  //alert("updateAddressBar()")
 }

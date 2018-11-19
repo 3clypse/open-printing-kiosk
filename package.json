@@ -46,6 +46,6 @@
     "nw": "^0.33.3"
   },
   "scripts": {
-    "start": "nw ."
+    "start": "cd /home/node/app && nw /opt/."
   }
 }
