@@ -43,7 +43,7 @@
   "dependencies": {
     "jquery": "^3.5.1",
     "js-sha512": "^0.8.0",
-    "nw": "^0.49.0"
+    "nw": "^0.49.1"
   },
   "scripts": {
     "start": "cd /home/node/app && nw /opt/."
