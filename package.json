@@ -41,7 +41,7 @@
     "plugin": true
   },
   "dependencies": {
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "js-sha512": "^0.8.0",
     "nw": "^0.49.0"
   },
